@@ -1,0 +1,42 @@
+2024-12-11 16:22:19,711 - INFO - This is an info log message.
+2024-12-11 16:22:19,713 - ERROR - This is an error log message.
+2024-12-11 16:22:19,715 - INFO - Error while sending or receiving.
+Traceback (most recent call last):
+  File "/databricks/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 528, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+2024-12-11 16:22:19,718 - INFO - Closing down clientserver connection
+2024-12-11 16:22:19,719 - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/databricks/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 528, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/databricks/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/spark/python/lib/py4j-0.10.9.7-src.zip/py4j/clientserver.py", line 531, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+2024-12-11 16:22:19,726 - INFO - Closing down clientserver connection
+2024-12-11 16:22:19,732 - INFO - Azure Blob Storage account key set successfully.
+2024-12-11 16:22:31,017 - INFO - Read data from input path: abfss://input@storageaccountda.dfs.core.windows.net/*.json
+2024-12-11 16:22:31,364 - INFO - Cook time and prep time columns converted to minutes.
+2024-12-11 16:22:31,464 - INFO - Recipe yield converted to numeric values.
+2024-12-11 16:22:32,192 - INFO - Medians for missing values joined back to data.
+2024-12-11 16:22:32,679 - INFO - Replaced missing or zero values with default or median values.
+2024-12-11 16:22:32,840 - INFO - Selected relevant columns.
+2024-12-11 16:22:40,754 - INFO - Data written to Azure Blob Storage at abfss://loggingprocessednew2@storageaccountda.dfs.core.windows.net/finaldata.parquet as Parquet.
+2024-12-11 16:22:40,757 - INFO - Data processing completed.
+2024-12-11 16:22:40,760 - INFO - Azure Blob Storage account key set.
+2024-12-11 16:22:42,572 - INFO - Data read from Parquet file.
+2024-12-11 16:22:43,916 - INFO - Filtered data for ingredients containing 'beef'. Found 47 rows.
+2024-12-11 16:22:43,991 - INFO - Calculated total cooking time.
+2024-12-11 16:22:44,226 - INFO - Assigned difficulty level based on cooking time.
+2024-12-11 16:22:44,312 - INFO - Calculated average cooking time for each difficulty level.
+2024-12-11 16:22:45,350 - INFO - Data written to abfss://loggingoutputnew2@storageaccountda.dfs.core.windows.net/output.csv in CSV format.
+2024-12-11 16:22:46,490 - INFO - Closing down clientserver connection
+2024-12-11 16:22:46,498 - INFO - Closing down clientserver connection
